@@ -15,30 +15,39 @@ on:
 
 jobs:
   build:
-    name: Build Package
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Install Procursus
-        uses: wwg135/procursus-action@main
+      - uses: actions/checkout@v3
         with:
-          packages: ldid findutils sed coreutils make
-          
-      - name: Pre theos
+          submodules: true
+
+      - name: Check cache
         run: |
-         curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos > theos
-         sed -i '' 's/get_sdks$//g' theos
-         bash theos
-          
-      - name: Build Package
-        run: |
-          export THEOS=~/theos
-          make package
-          
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+          echo upstream_heads=`git ls-remote https://github.com/theos/theos | head -n 1 | cut -f 1`-`git ls-remote https://github.com/theos/sdks | head -n 1 | cut -f 1` >> $GITHUB_ENV
+
+      - name: Use cache
+        id: cache
+        uses: actions/cache@v3
         with:
-          name: Packages
-          path: packages/
+          path: ${{ github.workspace }}/theos
+          key: ${{ runner.os }}-${{ env.upstream_heads }}
+
+      - name: Prepare Theos
+        uses: Randomblock1/theos-action@v1.3
+        with:
+          orion: "true"
+
+      - name: Build rootless package
+        run: |
+          rm -f packages/*
+          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+
+      - name: Upload rootless package
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Rootless package built by ${{ matrix.os }}"
+          path: ${{ github.workspace }}/packages/*-arm64.deb
