@@ -1,10 +1,17 @@
-name: Build Package
+name: build pacage
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - '*'
+    paths-ignore:
+      - ".gitignore"
   pull_request:
-    branches: [ master ]
+    branches:
+      - '*'
+    paths-ignore:
+      - ".gitignore"
+  workflow_dispatch:
 
 jobs:
   build:
