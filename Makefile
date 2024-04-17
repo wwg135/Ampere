@@ -2,8 +2,8 @@ TARGET := iphone:clang:latest:14.0
 THEOS_PACKAGE_SCHEME=rootless
 INSTALL_TARGET_PROCESSES = SpringBoard Preferences
 ARCHS = arm64 arm64e
-DEBUG = 1
-FINALPACKAGE = 0
+DEBUG = 0
+FINALPACKAGE = 1
 
 include $(THEOS)/makefiles/common.mk
 
