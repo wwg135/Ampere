@@ -8,7 +8,8 @@ BUNDLE_NAME = AmpereSettings
 AmpereSettings_FILES = AMPRootListController.m AmpSwitch.m
 AmpereSettings_FRAMEWORKS = UIKit
 AmpereSettings_PRIVATE_FRAMEWORKS = Preferences
-AmpereSettings_INSTALL_PATH = /Library/PreferenceBundles -framework CydiaSubstrate
+AmpereSettings_INSTALL_PATH = /Library/PreferenceBundles
 AmpereSettings_CFLAGS = -fobjc-arc -Wdeprecated-declarations -Wno-deprecated-declarations
 
+SUBPROJECTS = Preferences
 include $(THEOS_MAKE_PATH)/bundle.mk
