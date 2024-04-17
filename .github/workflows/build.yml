@@ -31,7 +31,6 @@ jobs:
          curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos > theos
          sed -i '' 's/get_sdks$//g' theos
          bash theos
-         $THEOS/bin/install.sh frameworks Preferences
           
       - name: Build Package
         run: |
