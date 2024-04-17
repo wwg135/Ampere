@@ -253,8 +253,8 @@
 		if (indexPath.section == 0) {
 			if (indexPath.row == 0) {
 				UIContextualAction *info = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:nil handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
-					UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Transparent Text" message:@"\nEnabling transparent text allows the background of the current app to show through the battery's percentage text. This is done to replicate iOS 16's styling, and works best on Homescreen & Lockscreen" preferredStyle:UIAlertControllerStyleAlert];
-					[alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:nil]];
+					UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"透明文本" message:@"\nEnabling transparent text allows the background of the current app to show through the battery's percentage text. This is done to replicate iOS 16's styling, and works best on Homescreen & Lockscreen" preferredStyle:UIAlertControllerStyleAlert];
+					[alertController addAction:[UIAlertAction actionWithTitle:@"撤销" style:UIAlertActionStyleDefault handler:nil]];
 					[self presentViewController:alertController animated:YES completion:nil];
 					completionHandler(YES);
 				}];
