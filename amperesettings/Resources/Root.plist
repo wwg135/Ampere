@@ -8,7 +8,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Appearance</string>
+			<string>外观</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -18,9 +18,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Percent Color</string>
+			<string>百分比颜色</string>
 			<key>subtitle</key>
-			<string>Swipe for more info</string>
+			<string>滑动获取更多信息</string>
 			<key>key</key>
 			<string>textStyle</string>
 			<key>values</key>
@@ -31,9 +31,9 @@
 			</array>
 			<key>titles</key>
 			<array>
-				<string>Default</string>
-				<string>Transparent</string>
-				<string>Custom</string>
+				<string>默认</string>
+				<string>透明</string>
+				<string>自定义</string>
 			</array>
 			<key>images</key>
 			<array>
@@ -57,9 +57,9 @@
 			<key>key</key>
 			<string>textColor</string>
 			<key>label</key>
-			<string>Text Color</string>
+			<string>设置文字颜色</string>
 			<key>subtitle</key>
-			<string>Set percentage label color</string>
+			<string>设置百分比标签颜色</string>
 			<key>height</key>
 			<string>70</string>
 			<key>id</key>
@@ -76,7 +76,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Colors</string>
+			<string>颜色</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -88,94 +88,13 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Fill Color</string>
+			<string>电池填充颜色</string>
 			<key>subtitle</key>
-			<string>Override normal color. Swipe cell to set color</string>
+			<string>覆盖正常颜色，左滑设置颜色</string>
 			<key>key</key>
 			<string>overrideColorStandard</string>
 			<key>id</key>
 			<string>overrideColorStandard</string>
-			<key>height</key>
-			<string>85</string>
-			<key>PostNotification</key>
-			<string>com.mtac.amp/preferences.changed</string>
-			<key>iconImageSystem</key>
-			<dict>
-				<key>name</key>
-				<string>battery.100</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>cellClass</key>
-			<string>AmpSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.mtac.amp</string>
-			<key>label</key>
-			<string>Fill Color</string>
-			<key>subtitle</key>
-			<string>Override charging color. Swipe cell to set color</string>
-			<key>key</key>
-			<string>overrideColorCharging</string>
-			<key>id</key>
-			<string>overrideColorCharging</string>
-			<key>height</key>
-			<string>85</string>
-			<key>PostNotification</key>
-			<string>com.mtac.amp/preferences.changed</string>
-			<key>iconImageSystem</key>
-			<dict>
-				<key>name</key>
-				<string>battery.100</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>cellClass</key>
-			<string>AmpSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.mtac.amp</string>
-			<key>label</key>
-			<string>Fill Color</string>
-			<key>subtitle</key>
-			<string>Override low power color. Swipe cell to set color</string>
-			<key>key</key>
-			<string>overrideColorLowPower</string>
-			<key>id</key>
-			<string>overrideColorLowPower</string>
-			<key>height</key>
-			<string>85</string>
-			<key>PostNotification</key>
-			<string>com.mtac.amp/preferences.changed</string>
-			<key>iconImageSystem</key>
-			<dict>
-				<key>name</key>
-				<string>battery.100</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>cellClass</key>
-			<string>AmpSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.mtac.amp</string>
-			<key>label</key>
-			<string>Fill Color</string>
-			<key>subtitle</key>
-			<string>Override critical color. Swipe cell to set color</string>
-			<key>key</key>
-			<string>overrideColorCritical</string>
-			<key>id</key>
-			<string>overrideColorCritical</string>
 			<key>height</key>
 			<string>85</string>
 			<key>PostNotification</key>
@@ -190,7 +109,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Font</string>
+			<string>字体</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -204,9 +123,9 @@
 			<key>id</key>
 			<string>fontSize</string>
 			<key>label</key>
-			<string>Font Size:</string>
+			<string>字体大小:</string>
 			<key>subtitle</key>
-			<string>Swipe left to reset</string>
+			<string>左滑重置</string>
 			<key>max</key>
 			<real>12</real>
 			<key>min</key>
@@ -225,7 +144,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Bolt</string>
+			<string>闪电标志</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -237,9 +156,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Show Charging Bolt</string>
+			<string>显示充电闪电</string>
 			<key>subtitle</key>
-			<string>Moves charging bolt next to battery percentage</string>
+			<string>将充电闪电标志移到电池百分比旁边</string>
 			<key>key</key>
 			<string>showBolt</string>
 			<key>id</key>
@@ -258,7 +177,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Gestures</string>
+			<string>手势</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -270,9 +189,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Use Low Power Gesture</string>
+			<string>使用省电手势</string>
 			<key>subtitle</key>
-			<string>Tap battery icon to toggle Low Power mode</string>
+			<string>点击电池图标切换低电量模式</string>
 			<key>key</key>
 			<string>useGesture</string>
 			<key>height</key>
@@ -291,7 +210,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Control Center</string>
+			<string>控制中心</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -303,9 +222,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Enable Battery Info</string>
+			<string>启用电量信息</string>
 			<key>subtitle</key>
-			<string>Force Touch on Low Power Mode module in Control Center to view</string>
+			<string>长按控制中心的低电量模式查看</string>
 			<key>key</key>
 			<string>useStatsModule</string>
 			<key>height</key>
@@ -324,7 +243,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Source</string>
+			<string>源码</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -334,7 +253,7 @@
 			<key>key</key>
 			<string>lowPowerColor</string>
 			<key>label</key>
-			<string>View Source Code</string>
+			<string>查看开源代码</string>
 			<key>subtitle</key>
 			<string>https://github.com/MTACS/Ampere</string>
 			<key>height</key>
