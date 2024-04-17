@@ -96,7 +96,7 @@
 	glowanimation.repeatCount = HUGE_VALF;
 	[self.batteryView.layer addAnimation:glowanimation forKey:@"glow"];
 
-	self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Charging", @"Normal", @"Low Power", @"Critical"]];
+	self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"充电", @"正常", @"低电量", @"关键"]];
 	self.segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
 	self.segmentedControl.frame = CGRectZero;
 	self.segmentedControl.selectedSegmentIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:@"preferenceSection" inDomain:domain] integerValue] ?: 0;    
