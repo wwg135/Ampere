@@ -171,28 +171,28 @@ NSString *voltage() {
 	NSString *title;
 	switch (row) {
 		case 0:
-			title = @"Charging";
+			title = @"充电";
 			break;
 		case 1:
-			title = @"Cycles";
+			title = @"循环次数";
 			break;
 		case 2:
-			title = @"Temperature";
+			title = @"温度";
 			break;
 		case 3:
-			title = @"Health";
+			title = @"健康";
 			break;
 		case 4:
-			title = @"Max Capacity";
+			title = @"最大容量";
 			break;
 		case 5:
-			title = @"Design Capacity";
+			title = @"设计容量";
 			break;
 		case 6:
-			title = @"Amperage";
+			title = @"电流";
 			break;
 		case 7:
-			title = @"Voltage";
+			title = @"电压";
 	}
 	return title;
 }
