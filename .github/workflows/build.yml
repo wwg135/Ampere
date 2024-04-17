@@ -32,12 +32,14 @@ jobs:
          sed -i '' 's/get_sdks$//g' theos
          bash theos
 
-      - name: Install Preferences Framework 
-        run: make -C /theos/lib/iPhoneOS.sdk/System/Library/Frameworks/Preferences.framework
+      - name: Install Preferences Framework
+        run: |
+          echo "Installing Preferences framework..."
+          theos/bin/install.sh frameworks Preferences
           
       - name: Build Package
         run: |
-          make
+          make packages
           
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
