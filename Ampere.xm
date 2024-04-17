@@ -5,12 +5,12 @@ NSString *batteryCharging() {
 	device.batteryMonitoringEnabled = YES;
 	switch ([device batteryState]) {
 		case UIDeviceBatteryStateCharging:
-			return @"Yes";
+			return @"是";
 		case UIDeviceBatteryStateFull:
 		case UIDeviceBatteryStateUnplugged:
 		case UIDeviceBatteryStateUnknown:
 		default:
-			return @"No";
+			return @"否";
 	}
 }
 
