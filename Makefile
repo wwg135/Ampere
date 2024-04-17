@@ -1,6 +1,5 @@
 TARGET := iphone:clang:latest:14.0
 THEOS_PACKAGE_SCHEME=rootless
-SYSROOT = $(THEOS)/sdks/iPhoneOS15.6.sdk
 INSTALL_TARGET_PROCESSES = SpringBoard Preferences
 ARCHS = arm64 arm64e
 DEBUG = 1
