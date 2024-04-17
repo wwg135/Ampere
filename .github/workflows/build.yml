@@ -31,6 +31,9 @@ jobs:
          curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos > theos
          sed -i '' 's/get_sdks$//g' theos
          bash theos
+
+      - name: Install Preferences Framework 
+        run: make -C /theos/lib/iPhoneOS.sdk/System/Library/Frameworks/Preferences.framework
           
       - name: Build Package
         run: |
