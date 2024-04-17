@@ -40,11 +40,11 @@
 - (void)setupButtonMenu {
 	[self.enableSwitch addTarget:self action:@selector(toggleState:) forControlEvents:UIControlEventTouchUpInside];
 	
-	UIAction *respring = [UIAction actionWithTitle:@"Respring" image:[UIImage systemImageNamed:@"gearshape.fill"] identifier:nil handler:^(__kindof UIAction *_Nonnull action) {
+	UIAction *respring = [UIAction actionWithTitle:@"注销" image:[UIImage systemImageNamed:@"gearshape.fill"] identifier:nil handler:^(__kindof UIAction *_Nonnull action) {
 		[self respring];
 	}];
 
-	UIAction *reset = [UIAction actionWithTitle:@"Reset Settings" image:[UIImage systemImageNamed:@"gearshape.fill"] identifier:nil handler:^(__kindof UIAction *_Nonnull action) {
+	UIAction *reset = [UIAction actionWithTitle:@"重置设置" image:[UIImage systemImageNamed:@"gearshape.fill"] identifier:nil handler:^(__kindof UIAction *_Nonnull action) {
 		[self reset];
 	}];
 	reset.attributes = UIMenuElementAttributesDestructive;
@@ -113,7 +113,7 @@
 	self.sectionSegmentLabel.font = [UIFont systemFontOfSize:14 weight:UIFontWeightSemibold];
 	self.sectionSegmentLabel.textColor = [UIColor secondaryLabelColor];
 	self.sectionSegmentLabel.textAlignment = NSTextAlignmentCenter;
-	self.sectionSegmentLabel.text = @"ꜜ Select Battery Mode to Configure ꜜ";
+	self.sectionSegmentLabel.text = @"ꜜ 选择要配置的电池模式 ꜜ";
 
 	[self.headerView addSubview:self.enableSwitch];
 	[self.headerView addSubview:self.batteryView];
@@ -334,9 +334,9 @@
 	});
 }
 - (void)reset {
-	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Reset Settings" message:@"\n All settings will be restored to default and device will respring. Continue?" preferredStyle:UIAlertControllerStyleAlert];
-	[alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-	[alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"重置设置" message:@"\n 所有设置将恢复为默认值，设备将注销，继续?" preferredStyle:UIAlertControllerStyleAlert];
+	[alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil]];
+	[alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
 		[[NSUserDefaults standardUserDefaults] removePersistentDomainForName:domain];
 		[self reloadSpecifiers];
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
