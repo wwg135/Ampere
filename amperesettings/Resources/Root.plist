@@ -115,9 +115,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Fill Color</string>
+			<string>电池填充颜色</string>
 			<key>subtitle</key>
-			<string>Override charging color. Swipe cell to set color</string>
+			<string>覆盖充电颜色，左滑设置颜色</string>
 			<key>key</key>
 			<string>overrideColorCharging</string>
 			<key>id</key>
@@ -142,9 +142,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Fill Color</string>
+			<string>电池填充颜色</string>
 			<key>subtitle</key>
-			<string>Override low power color. Swipe cell to set color</string>
+			<string>覆盖低电量颜色，左滑设置颜色</string>
 			<key>key</key>
 			<string>overrideColorLowPower</string>
 			<key>id</key>
@@ -169,9 +169,9 @@
 			<key>defaults</key>
 			<string>com.mtac.amp</string>
 			<key>label</key>
-			<string>Fill Color</string>
+			<string>电池填充颜色</string>
 			<key>subtitle</key>
-			<string>Override critical color. Swipe cell to set color</string>
+			<string>覆盖关键颜色，左滑设置颜色</string>
 			<key>key</key>
 			<string>overrideColorCritical</string>
 			<key>id</key>
